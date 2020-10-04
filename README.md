@@ -12,49 +12,48 @@ Necessaria a adição da seginte função para integrar com o codigo principal.
 
 //Função de chamada da atualização de energia por mobilidade
 
-void UpdateMobilityEnergy(NodeContainer &UABSNodes){
-                        
-      bool trigger = false;
+	void UpdateMobilityEnergy(NodeContainer &UABSNodes){
+	        bool trigger = false;
 
-			for (uint16_t i=0 ; i < UABSNodes.GetN(); i++){
-				Ptr<MobilityModel> UABSposition = UABSNodes.Get(i)->GetObject<MobilityModel>();
+		for (uint16_t i=0 ; i < UABSNodes.GetN(); i++){
+			Ptr<MobilityModel> UABSposition = UABSNodes.Get(i)->GetObject<MobilityModel>();
 
-				Vector pos = UABSposition->GetPosition ();
+			Vector pos = UABSposition->GetPosition ();
 
-				Ptr<BasicEnergySource> source = UABSNodes.Get(i)->GetObject<BasicEnergySource>();
-        
-				//Ordem de entrada dos parametros: posição X, posição Y, posição Z, tempo de atualização, velocidade
-				source->UpdateEnergyMobSource(pos.x,pos.y,pos.z, 1, 4);
+			Ptr<BasicEnergySource> source = UABSNodes.Get(i)->GetObject<BasicEnergySource>();
 
-                                float RE = source->GetRemainingEnergy();
+			//Ordem de entrada dos parametros: posição X, posição Y, posição Z, tempo de atualização, velocidade
+			source->UpdateEnergyMobSource(pos.x,pos.y,pos.z, 1, 4);
 
-                                if(RE == 0){
-                                        trigger = true;
-                                } 
-			}
+			float RE = source->GetRemainingEnergy();
 
-      if(trigger){
-              NodeContainer charg_nodes;
+			if(RE == 0){
+				trigger = true;
+			} 
+		}
 
-              for (NodeContainer::Iterator j = UABSNodes.Begin ();j != UABSNodes.End (); ++j)
-          {  
+	      if(trigger){
+		      NodeContainer charg_nodes;
 
-            Ptr<Node> object = *j;
-            Ptr<MobilityModel> UABSposition = object->GetObject<MobilityModel> ();
-                              Ptr<BasicEnergySource> source = object->GetObject<BasicEnergySource>();
+		      for (NodeContainer::Iterator j = UABSNodes.Begin ();j != UABSNodes.End (); ++j)
+		  {  
 
-            if (source->GetRemainingEnergy() > 0){
-                                      charg_nodes.Add(object);
-                              }
-          }
+		    Ptr<Node> object = *j;
+		    Ptr<MobilityModel> UABSposition = object->GetObject<MobilityModel> ();
+				      Ptr<BasicEnergySource> source = object->GetObject<BasicEnergySource>();
 
-              UABSNodes = charg_nodes;
+		    if (source->GetRemainingEnergy() > 0){
+					      charg_nodes.Add(object);
+				      }
+		  }
 
-      }
-      NS_LOG_UNCOND("Numero de nos ativos:");
-      NS_LOG_UNCOND(UABSNodes.GetN());
+		      UABSNodes = charg_nodes;
 
-			Simulator::Schedule(Seconds(1), &UpdateMobilityEnergy, UABSNodes);
+	      }
+	      NS_LOG_UNCOND("Numero de nos ativos:");
+	      NS_LOG_UNCOND(UABSNodes.GetN());
+
+	      Simulator::Schedule(Seconds(1), &UpdateMobilityEnergy, UABSNodes);
 
 	}
   
