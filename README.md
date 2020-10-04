@@ -11,6 +11,7 @@ Necessaria a adição da seginte função para integrar com o codigo principal.
 ---------------------------------------------------------------------------------------------------
 
 //Função de chamada da atualização de energia por mobilidade
+
 void UpdateMobilityEnergy(NodeContainer &UABSNodes){
                         
       bool trigger = false;
