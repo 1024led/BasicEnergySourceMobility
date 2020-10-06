@@ -51,8 +51,8 @@ Necessaria a adição da seginte função para integrar com o codigo principal.
 		      UABSNodes = charg_nodes;
 
 	      }
-	      NS_LOG_UNCOND("Numero de nos ativos:");
-	      NS_LOG_UNCOND(UABSNodes.GetN());
+	      //NS_LOG_UNCOND("Numero de nos ativos:");
+	      //NS_LOG_UNCOND(UABSNodes.GetN());
 
 	      Simulator::Schedule(Seconds(1), &UpdateMobilityEnergy, UABSNodes);
 
