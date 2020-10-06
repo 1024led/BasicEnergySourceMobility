@@ -4,8 +4,8 @@ Modulo de energia "BasicEnergySource" implementado no NS3 com compatibilidade a 
 
 funcionalidades implementadas:
 - Gasto de energia com mobilidade (Horizontal, Vertical e Hovering);
-- Função para desconto de processamento (a ser adicionado)
-- Função de recarga 
+- Função para desconto de processamento (a ser adicionado instruções)
+- Função de recarga (a ser adicionado instruções)
 
 Necessaria a adição da seginte função para integrar com o codigo principal.
 
