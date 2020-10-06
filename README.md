@@ -7,6 +7,8 @@ funcionalidades implementadas:
 - Função para desconto de processamento (a ser adicionado instruções)
 - Função de recarga (a ser adicionado instruções)
 
+IMPORTANTE: Os arquivos devem ser adicionados em /src/energy/model na pasta do NS3.
+
 Necessaria a adição da seginte função para integrar com o codigo principal.
 
 ---------------------------------------------------------------------------------------------------
