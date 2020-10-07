@@ -30,6 +30,7 @@ Obs 2: Dentro da função UpdateEnergyMobSource contida no arquivo basic-energy-
 
 Adaptar esses valores possibilita atenuar ou acentuar o gasto de energia, caso queira uma simulação mais realista busque informações sobre o UAV real que deseja se basear.
 
+Obs 3: É possivel utilizar tanto o for com uma variavel inteira quanto com iterator (exemplo na função abaixo), mas estarei exemplificando usando a variavel inteira.
 
 //Função de chamada da atualização de energia por mobilidade
 
