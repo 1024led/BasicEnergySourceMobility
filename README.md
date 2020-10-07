@@ -101,6 +101,6 @@ Adaptar esses valores possibilita atenuar ou acentuar o gasto de energia, caso q
   
  	Ptr<BasicEnergySource> source = UABSNodes.Get(i)->GetObject<BasicEnergySource>();
 	source->CallRecharge();
-	//X sendo o valor de consumo da função executada 
+	
 
 
