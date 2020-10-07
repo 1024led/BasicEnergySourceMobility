@@ -1,6 +1,6 @@
 # BasicEnergySource com Mobilidade
-(Faltando adicionar instruções de uso de outras funcionalidades)
-Modulo de energia "BasicEnergySource" implementado no NS3 com compatibilidade a gasto por mobilidade para UAV's (em testes).
+
+Modulo de energia "BasicEnergySource" implementado no NS3 com compatibilidade a gasto por mobilidade para UAV's.
 
 funcionalidades implementadas:
 1 - Gasto de energia com mobilidade (Horizontal, Vertical e Hovering);
