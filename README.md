@@ -17,14 +17,18 @@ Necessaria a adição das funções abaixo para integrar com o codigo principal.
 1/2 - Gasto de energia com mobilidade
 ---------------------------------------------------------------------------------------------------
 Passe como Referencia o NodeContainer de sua aplicação.
+
 Obs 1: Atenção com as entradas na função UpdateEnergyMobSource, adapte os valores às caracteristicas da sua implementação, principalmente em relação a tempo de atualização.
 
 Obs 2: Dentro da função UpdateEnergyMobSource contida no arquivo basic-energy-source.cc existem as segintes váriaveis de escala do gasto de energia.
+
 "p" representa o gasto para hovering e mobilidade horizontal;
+
 "pc" representa o gasto com mobilidade vertical para cima;
+
 "pd" representa o gasto com mobilidade vertical para baixo.
 
-adaptar esses valores possibilita atenuar ou acentuar o gasto de energia, caso queira uma simulação mais realista busque informações sobre o UAV real que deseja se basear.
+Adaptar esses valores possibilita atenuar ou acentuar o gasto de energia, caso queira uma simulação mais realista busque informações sobre o UAV real que deseja se basear.
 
 
 //Função de chamada da atualização de energia por mobilidade
