@@ -82,6 +82,7 @@ Adaptar esses valores possibilita atenuar ou acentuar o gasto de energia, caso q
   3 - Função para desconto de processamento
   ----------------------------------------------------------------------------------------------------------------
   Obtenha o BasicEnergySource do nó desejado no NodeContainer, basta chamar a função de desconto de energia. 
+  
   exemplo (utilizando FOR com referencia i):
   
   	Ptr<BasicEnergySource> source = UABSNodes.Get(i)->GetObject<BasicEnergySource>();
