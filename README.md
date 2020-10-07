@@ -3,15 +3,19 @@
 Modulo de energia "BasicEnergySource" implementado no NS3 com compatibilidade a gasto por mobilidade para UAV's.
 
 funcionalidades implementadas:
+
 1 - Gasto de energia com mobilidade (Horizontal, Vertical e Hovering);
-2 - Eliminação do Nó em caso de energia completamente gasta (integrada à função de gasto por mobilidade); 
+
+2 - Eliminação do Nó em caso de energia completamente gasta (integrada à função de gasto por mobilidade, atenção pois após a eliminação do nó ele não poderá ser recuperado durante a simulação);
+
 3 - Função para desconto de processamento;
+
 4 - Função de recarga (a recarga é realizada ao decorrer do tempo, simulando o tempo de espera para recarregar uma bateria, mais informações abaixo).
 
 
 IMPORTANTE: Os arquivos devem ser adicionados em /src/energy/model na pasta do NS3.
 
-Necessaria a adição das funções abaixo para integrar com o codigo principal.
+Necessaria a adição da função abaixo na implementação principal para integrar os modulos de energia e mobilidade.
 
 
 1/2 - Gasto de energia com mobilidade
