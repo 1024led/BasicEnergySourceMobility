@@ -26,7 +26,9 @@ Obs 1: Atenção com as entradas na função UpdateEnergyMobSource, adapte os va
 
 Obs 2: Dentro da função UpdateEnergyMobSource contida no arquivo basic-energy-source.cc existem as segintes váriaveis de escala do gasto de energia.
 
-"p" representa o gasto para hovering e mobilidade horizontal;
+"pm" representa o gasto para mobilidade horizontal;
+
+"ph" representa o gasto para hovering;
 
 "pc" representa o gasto com mobilidade vertical para cima;
 
